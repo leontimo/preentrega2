@@ -16,55 +16,49 @@
 }
 
 .formulario {
-    background-color: rgb(147, 147, 245);color: blacks;
+    background-color: rgb(147, 147, 245);
+    color: blacks;
     display: flex;
     justify-content: space-between;
     column-gap: 1px;
-    
-
-}
-.inicio h1{
-    font-family: 'Times New Roman', Times, serif ;
-    font-weight: bold;
-    color: blue;
-    text-align: center;
-    font-size: 2.5em;
 
 
 }
-/*estilos de la pag consejos y trucos*/
-/* h2{
+
+.inicio h1 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: blue;
     text-align: center;
     font-size: 2.5em;
-} */
-.columna{
+
+
+}
+
+/*estilos de la pag consejos y trucos*/
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    font-size: 2.5em;
+} 
+.column {
     float: left;
     width: 33.33%;
     padding: 15px;
-    
-
 }
-.tacticas:after{
-    content:"";
+
+
+.row:after {
+    content: "";
     display: table;
     clear: both;
-     
 }
-@media screen and(max-width:600px){
-    .columna{
-        width: 100%;
 
 
-    }
-    
-} 
-    
-@media screen and(max-width:320) {
-    .columna{
+@media screen and (max-width:600px) {
+    .column {
         width: 100%;
     }
-    
-} 
+}
