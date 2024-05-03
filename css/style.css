@@ -23,3 +23,48 @@
     
 
 }
+.inicio h1{
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    font-size: 2.5em;
+
+
+}
+/*estilos de la pag consejos y trucos*/
+/* h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    font-size: 2.5em;
+} */
+.columna{
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    
+
+}
+.tacticas:after{
+    content:"";
+    display: table;
+    clear: both;
+     
+}
+@media screen and(max-width:600px){
+    .columna{
+        width: 100%;
+
+
+    }
+    
+} 
+    
+@media screen and(max-width:320) {
+    .columna{
+        width: 100%;
+    }
+    
+} 
