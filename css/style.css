@@ -138,15 +138,6 @@ main .inicio {
 }
 
 /**en ultimo lugar media**/
-@media (max-width: 320px) {
-  h1 {
-    color: rgb(175, 26, 175);
-    font-size: 20px;
-  }
-  main {
-    background-color: rgb(49, 160, 49);
-  }
-}
 @media (min-width: 375px) and (max-width: 768px) {
   h1 {
     color: rgb(201, 156, 201);
@@ -155,6 +146,15 @@ main .inicio {
   }
   main {
     background-color: rgb(230, 230, 36);
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    color: rgb(175, 26, 175);
+    font-size: 20px;
+  }
+  main {
+    background-color: rgb(49, 160, 49);
   }
 }
 
