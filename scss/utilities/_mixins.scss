@@ -1,0 +1,14 @@
+/**bloque para reutilizar fonts colores **/
+@mixin fonts-colors ($color) {
+    color: $color;
+    border-color: $color;
+    background-color: $color;
+
+}
+
+/**darle diferentes valores al parametro color**/
+h2{
+    @include fonts-colors(rgb(214, 210, 214))
+}
+
+

@@ -1,0 +1,40 @@
+.estadio img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ul-icons>img {
+    width: 25 px;
+    height: 25px;
+}
+
+.navbar-nav {
+    margin: 15px;
+
+    .nav-link {
+        text-decoration: none;
+        position: relative;
+
+    }
+}
+
+.nav-link::after{
+    content: ""  ;/**contenido vacio para crear una linea**/
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    transition: width 0.3s;
+    
+
+}
+.nav-link:hover{
+    color: blue;
+
+}
+.nav-link:hover::after{
+    width: 100%;
+    
+}

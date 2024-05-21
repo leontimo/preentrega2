@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos pagina inicio*/
+.estadio img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ul-icons>img {
+    width: 25 px;
+    height: 25px;
+}
+
+.formulario {
+    background-color: rgb(147, 147, 245);
+    color: blacks;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1px;
+
+
+}
+
+ 
+
+/*estilos de la pag consejos y trucos*/
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    font-size: 2.5em;
+} 
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}

@@ -1,64 +1,161 @@
+@charset "UTF-8";
+/**en primer lugar utilities**/
+/**bloque para reutilizar fonts colores **/
+/**darle diferentes valores al parametro color**/
+h2 {
+  color: rgb(214, 210, 214);
+  border-color: rgb(214, 210, 214);
+  background-color: rgb(214, 210, 214);
+}
+
+/**segundo lugar el reset**/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*estilos pagina inicio*/
+/**en tercer orden layout**/
 .estadio img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.ul-icons>img {
-    width: 25 px;
-    height: 25px;
+.ul-icons > img {
+  width: 25 px;
+  height: 25px;
+}
+
+.navbar-nav {
+  margin: 15px;
+}
+.navbar-nav .nav-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: ""; /**contenido vacio para crear una linea**/
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  color: blue;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+footer {
+  background-image: linear-gradient(to right, #051937, #162a6b, #46369e, #8636ca, #d112eb);
+}
+
+footer {
+  color: #fff; /* Color del texto */
+  padding: 20px 0; /* Espacio interno arriba y abajo */
+  text-align: center; /* Centrando el texto */
+}
+
+footer h2 {
+  margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.ul-icons {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno de la lista */
+  display: flex; /* Uso de flexbox para alinear los iconos */
+  justify-content: center; /* Centrando los iconos horizontalmente */
+  gap: 20px; /* Espacio entre los iconos */
+}
+
+.ul-icons li {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.ul-icons li::before {
+  content: attr(data-app); /* Usa el atributo data-app para el texto */
+  position: absolute;
+  bottom: -30px; /* Ajusta según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Inicialmente invisible */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: #fff; /* Color del texto */
+  padding: 5px 10px; /* Espacio interno */
+  border-radius: 5px; /* Bordes redondeados */
+  white-space: nowrap; /* Evita el salto de línea */
+  transition: opacity 0.3s, bottom 0.3s; /* Transición suave */
+  pointer-events: none; /* Evita interferir con el puntero */
+}
+
+.ul-icons li:hover::before {
+  opacity: 1; /* Hace visible el texto */
+  bottom: -40px; /* Sube la posición del texto */
+}
+
+.ul-icons img {
+  width: 40px; /* Tamaño de los iconos */
+  height: 40px; /* Tamaño de los iconos */
+  transition: transform 0.3s, opacity 0.3s; /* Transición para la animación */
+}
+
+.ul-icons img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+  opacity: 0.8; /* Reduce la opacidad al pasar el cursor */
 }
 
 .formulario {
-    background-color: rgb(147, 147, 245);
-    color: blacks;
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1px;
-
-
+  background-color: rgb(147, 147, 245);
+  color: blacks;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1px;
 }
 
-.inicio h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: blue;
-    text-align: center;
-    font-size: 2.5em;
-
-
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: rgb(9, 9, 9);
+  text-align: center;
+  font-size: 2.5em;
 }
 
-/*estilos de la pag consejos y trucos*/
-h2{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: blue;
-    text-align: center;
-    font-size: 2.5em;
-} 
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 15px;
+main {
+  background-color: rgb(214, 210, 214);
+}
+main .inicio {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+/**en ultimo lugar media**/
+@media (max-width: 320px) {
+  h1 {
+    color: rgb(175, 26, 175);
+    font-size: 20px;
+  }
+  main {
+    background-color: rgb(49, 160, 49);
+  }
+}
+@media (min-width: 375px) and (max-width: 768px) {
+  h1 {
+    color: rgb(201, 156, 201);
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  main {
+    background-color: rgb(230, 230, 36);
+  }
 }
 
-
-@media screen and (max-width:600px) {
-    .column {
-        width: 100%;
-    }
-}
+/*# sourceMappingURL=style.css.map */

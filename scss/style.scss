@@ -1,0 +1,20 @@
+/**en primer lugar utilities**/
+@import "./utilities/funciones";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+@import "./utilities/variable";
+
+/**segundo lugar el reset**/
+@import "./base/reset";
+
+/**en tercer orden layout**/
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/maintorneos";
+@import "./layout/main";
+
+/**en ultimo lugar media**/
+@import "./layout/media/media320";
+@import "./layout/media/media768";
+
+
