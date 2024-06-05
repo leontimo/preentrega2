@@ -112,11 +112,34 @@ footer h2 {
 }
 
 .formulario {
-  background-color: rgb(147, 147, 245);
-  color: blacks;
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  column-gap: 1px;
+  flex-direction: column;
+  background-color: rgb(150, 233, 233);
+}
+
+.formulario form {
+  max-width: 820px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 0px 4px rgba(52, 52, 53, 0.183);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.formulario label {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.formulario input {
+  border-radius: 5px;
+  border: 2px solid #f75d5d;
+  outline: none;
 }
 
 h2 {
@@ -135,6 +158,95 @@ main .inicio {
   border-radius: 8px;
   max-width: 800px;
   margin: 20px auto;
+}
+
+.imageninicio1,
+.imageninicio2,
+.imageninicio3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-left,
+.text-right,
+.text-left,
+.image-right {
+  flex: 1;
+}
+
+.image-left img,
+.image-right img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-left img:hover,
+.image-right img:hover {
+  transform: scale(1.1);
+}
+
+.image-left {
+  order: 1;
+  margin: 10px;
+}
+
+.text-right {
+  order: 2;
+  padding-left: 20px;
+}
+
+.text-left {
+  order: 1;
+  padding-right: 20px;
+}
+
+.image-right {
+  margin: 10px;
+  order: 2;
+}
+
+.imagen-actualizacion {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  /**centra el contenedor horizontalmente**/
+  position: relative;
+}
+
+.imagen-actualizacion img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /**elimina el espacio debajo de la img**/
+  position: relative;
+}
+
+/* Responsive para diseño de moviles */
+@media (max-width: 768px) {
+  .imageninicio1,
+  .imageninicio2,
+  .imageninicio3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-left,
+  .image-right {
+    order: 1;
+    width: 100%;
+  }
+  .text-right,
+  .text-left {
+    order: 2;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+.card-group .card-img-top {
+  width: 320px;
+  height: 230px;
 }
 
 /**en ultimo lugar media**/

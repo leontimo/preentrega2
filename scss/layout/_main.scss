@@ -1,18 +1,114 @@
-
-
-h2{
+h2 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     color: rgb(9, 9, 9);
     text-align: center;
     font-size: 2.5em;
-} 
-main{
+}
+
+main {
     background-color: rgb(214, 210, 214);
-    .inicio{
+
+    .inicio {
         padding: 20px;
         border-radius: 8px;
         max-width: 800px;
         margin: 20px auto;
+    }
 }
+
+.imageninicio1,
+.imageninicio2,
+.imageninicio3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-left,
+.text-right,
+.text-left,
+.image-right {
+    flex: 1;
+}
+
+.image-left img,
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-left img:hover,
+.image-right img:hover {
+    transform: scale(1.1);
+}
+
+.image-left {
+    order: 1;
+    margin: 10px;
+}
+
+.text-right {
+    order: 2;
+    padding-left: 20px;
+}
+
+.text-left {
+    order: 1;
+    padding-right: 20px;
+}
+
+.image-right {
+    margin: 10px;
+    order: 2;
+}
+
+.imagen-actualizacion {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    /**centra el contenedor horizontalmente**/
+    position: relative;
+}
+
+.imagen-actualizacion img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /**elimina el espacio debajo de la img**/
+    position: relative;
+}
+
+
+
+/* Responsive para diseño de moviles */
+@media (max-width: 768px) {
+
+    .imageninicio1,
+    .imageninicio2,
+    .imageninicio3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-left,
+    .image-right {
+        order: 1;
+        width: 100%;
+    }
+
+    .text-right,
+    .text-left {
+        order: 2;
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+}
+
+.card-group .card-img-top {
+    width: 320px;
+    height: 230px;
+
 }
